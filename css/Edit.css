@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --main-bg-color: #121212;
+    --main-text-color: #ffffff;
+    --header-bg-color: #1a1a1a;
+    --subheader-bg-color: #272727;
+    --list-odd-bg: #1a1a1a;
+    --list-even-bg: #272727;
+    --active-item: #353535;
+    --hover-item: #464646;
+    --highlighted-item: #eeb312;
+    --highlighted-text: #cc1821;
+}
+
+*{
+    font-family: "Lato", sans-serif !important;
+}
+
+a:-webkit-any-link{
+    text-decoration: none !important;
+}
+
+body{
+    background-color: var(--main-bg-color) !important;
+    overflow-x: hidden !important;
+}
+
+html.hydrated{
+    height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#container{
+    width: 100dvw;
+    min-height: 100dvh !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 0px !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    padding-bottom: 5rem;
+}
+
+.sticky-top{
+    z-index: 1000;
+    background-color: var(--header-bg-color) !important;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem 3rem;
+    height: fit-content;
+}
+
+.topnav{
+    background-color: var(--header-bg-color) !important;
+    width: inherit;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0.5rem 5rem;
+    height: fit-content;
+    gap: 0.25rem;
+}
+
+.topnav>a:link, .ligi>a:link{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    border-radius: 2rem;
+    text-wrap: nowrap;
+    gap: 0.75rem;
+}
+
+.topnav>a:link:focus, .ligi>a:link:focus{
+    background-color: rgba(172, 172, 172, 0.5);
+}
+
+#text{
+    display: none !important;
+}
+
+.ligi{
+    background-color: var(--subheader-bg-color) !important;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.25rem 7rem;
+    height: fit-content;
+    border: none !important;
+    margin-bottom: 0.75rem;
+}
+
+tr:has(td.tb-mid){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: max-content;
+    width: 95vw;
+    min-height: 80vh;
+}
+
+tr>td.tb-left, tr>td.tb-mid, tr>td.tb-right{
+    height: 80vh !important;
+}
+
+.tb{
+    width: 90% !important;
+}
+
+.tb-left{
+    width: 25% !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-width: 25% !important;
+}
+
+#1.tabcontent, #2.tabcontent, #3.tabcontent{
+    overflow-y: auto;
+    height: 500px !important;
+}
+
+.tb-left>#belka{
+    width: 100% !important;
+}
+
+.tb-left>#belka>.tab{
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.tb-left>#belka>#myDropdown>#myInputSearch{
+    margin: 0.5rem !important;
+    width: 90%;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
+
+.tb-left>#belka>#myDropdown{
+    position: sticky !important;
+    top: 0px !important;
+    left: 0px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ramowka{
+    width: 100% !important;
+}
+
+tr.belka{
+    width: 100% !important;
+}
+
+.tb-left>#belka>#myDropdown>.tabcontent, #belka, table.ramowka{
+    width: 100% !important;
+}
+
+table.ramowka>tbody>tr{
+    height: fit-content;
+}
+
+table.ramowka>tbody>tr:nth-child(odd){
+    background-color: var(--list-odd-bg);
+}
+
+table.ramowka>tbody>tr:nth-child(even){
+    background-color: var(--list-even-bg);
+}
+
+table.ramowka>tbody>tr>td{
+    padding: 0.25rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+}
+
+table.ramowka>tbody>tr>td>a{
+    padding: 0;
+    transition: 150ms ease-out all;
+    transition-delay: 200ms;
+}
+
+table.ramowka>tbody>tr>td>a>b>u{
+    text-decoration: none !important;
+    font-weight: bolder;
+}
+
+table.ramowka>tbody>tr:hover>td>a{
+    padding-block: 1rem;
+    color: var(--main-text-color) !important;
+    filter: drop-shadow(0px 0px 0.75rem var(--main-text-color)) !important;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+#belka>.tab{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 !important;
+    background-color: var(--header-bg-color);
+}
+
+#belka>.tab>.tablinks{
+    width: 33.33% !important;
+    background-color: var(--list-even-bg);
+    color: var(--main-text-color);
+    padding: 1rem;
+    opacity: 0.5;
+    transition: 150ms ease-out all;
+    font-weight: normal;
+}
+
+#belka>.tab>.tablinks.active{
+    background-color: var(--active-item) !important;
+    color: var(--main-text-color);
+    opacity: 1 !important;
+    width: 50% !important;
+    font-weight: bolder;
+}
+
+#belka>.tab>.tablinks:hover{
+    background-color: var(--hover-item) !important;
+    opacity: 0.8;
+}
+
+.tb-mid{
+    width: 100% !important;
+    min-height: fit-content !important;
+    padding-bottom: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.tb-mid>center>center>.sterowanie{
+    width: 100%;
+    margin: 0 !important;
+    padding-block: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--active-item);
+}
+
+.tb-mid>center>center>.sterowanie>font{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem
+}
+
+.tb-mid>center>center>.sterowanie>font>a{
+    transition: 150ms ease-out all;
+    scale: 1;
+    padding: 0.5rem;
+}
+
+
+.tb-mid>center>center>span>a{
+    color: var(--main-text-color);
+    border: none !important;
+    text-decoration: none !important;
+}
+
+.tb-mid>center>center>span>b{
+    color: var(--highlighted-item) !important;
+}
+
+.tb-mid>center>center>span>a>b:hover{
+    text-decoration: underline;
+}
+.acv{
+    text-decoration: none !important;
+    color: var(--highlighted-text) !important;
+    filter: drop-shadow(0px 0px 0.5rem var(--highlighted-text)) !important;
+    border: none !important;
+    font-weight: bolder !important;
+}
+
+.tb-mid>center>center>.sterowanie>font>a:hover{
+    scale: 1.2;
+    background-color: var(--hover-item);
+    color: var(--highlighted-item) !important;
+    box-shadow: 0px 0px 21px 0px var(--hover-item) !important;
+    border-radius: 0.5rem;
+}
+
+.tb-mid>center>center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+center>iframe{
+    aspect-ratio: 16/9 !important;
+    height: auto !important;
+    max-width: 65dvw;
+}
+
+.tb-mid>center>center>span{
+    font-size: 1.2rem !important;
+    margin-bottom: -2rem !important;
+}
+
+html:has(body>#player), body:has(#player), #player, center>iframe{
+    width: 90% !important;
+    height: auto;
+    max-height: 10% !important;
+    aspect-ratio: 16/9 !important;
+}
+
+center>iframe{
+    border-radius: 1rem !important;
+}
+
+.tb-right{
+    width: 25% !important;
+    min-width: 25% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+.tb-right>iframe{
+    width: 100% !important;
+    height: 90% !important;
+    border-bottom: 1px solid var(--hover-item);
+}
+
+.tb-right>iframe>iframe{
+    scale: 2 !important;
+}
+
+details{
+    width: 100% !important;
+}
+
+center:has(.infoDet){
+    width: 100%;
+}
+
+/* USUWANIE "REKLAM" */
+.topnav>a:link>img, center>.infoDet>a:link>img, center>a:link>img{
+    display: none;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1000px){
+    .tb-left{
+        display: none !important;
+    }
+    .tb-right{
+        display: none !important;
+    }
+}
+
+/* STYLE SCROLLBARA */
+::-webkit-scrollbar{
+    width: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--hover-item);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--active-item);
+    border-radius: 2rem;
+}
+
+/* RESTYLING - FILLQ */
