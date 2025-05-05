@@ -5,6 +5,10 @@
  
  ### A browser extension that visually enhances strimsy.top
 
+![GitHub Created At](https://img.shields.io/github/created-at/Fillq/strims_reskin?color=%2326de57)
+![GitHub contributors](https://img.shields.io/github/contributors/Fillq/strims_reskin?style=flat&color=%2342a1f5)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/Fillq/strims_reskin?color=%23e84ab9)
+
 </div>
 
 ___
